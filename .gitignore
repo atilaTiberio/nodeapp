@@ -63,3 +63,5 @@ typings/
 # for intellij projects
 .idea
 nodeapp.iml
+
+package-lock.json
