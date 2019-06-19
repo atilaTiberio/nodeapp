@@ -1,0 +1,45 @@
+
+/*
+    Applying 3 differents rules on h1 selector
+    as long as the element has an id declaration, this one will win
+    inline
+        ID -preferred
+            class
+                tag (type selector)
+
+body {
+    block: declaration
+}
+it's suggested not to use IDs
+ */
+
+h1 {
+    color: #2f4f4f;
+    margin-bottom: 10px;
+}
+
+#main-nav {
+    margin-top: 10px; /* reduces the margins, it seems box sizing helps to avoid this*/
+    list-style: none; /* removes the bullets */
+    padding-left: 0;  /* moves elements to the left and hides the * of li*/
+}
+
+
+#main-nav li {
+    display: inline-block; /*Makes list items appear side by side rather than stacked*/
+}
+
+#main-nav a { /* higher specificity selector 1,0,1*/
+    color: white !important;
+    background-color: #13a4a4;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration: none; /* Provides a button like appearence for the navigational links */
+}
+
+#main-nav .featured { /* this is going to win 1,1,0*/
+    background-color: orange ; /* this won't override the teal due to selector specificity, if we use !important then it will be overiden*/
+
+}
+
+

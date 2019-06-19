@@ -1,0 +1,35 @@
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit; /*Global border-box fix */
+}
+
+body {
+    background-color: #eee;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body * + * {
+    margin-top: 1.5em; /* Lobotomized owl global margins*/
+}
+
+/* so far it's a good practice to start with these styles*/
+
+header {
+    padding: 1em 1.5em;
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: .5em;
+    margin-bottom: 1.5em;
+}
+
+.main {
+    padding: 0 1.5em;
+    background-color:  #fff;
+    border-radius: .5em;
+}
+

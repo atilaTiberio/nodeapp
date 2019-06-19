@@ -12,7 +12,6 @@ mongoose.connect("mongodb://localhost:27017/testmongo", { useNewUrlParser: true 
     }
 });
 
-
 module.exports=mongoose;
 
 

@@ -1,0 +1,85 @@
+
+:root {
+    --main-font: Helvetica, Arial, sans-serif;
+}
+
+ body {
+     line-height: 1.2; /*spaces between of lines of text*/
+ }
+
+
+.padded {
+    border-style: dotted;
+    font-size: 16px;
+    padding: 1em;
+    /* takes the font size value (if defined or inherited) to compute this padding  so 16 * 2 = 32px
+        these ones are good when setting properties like padding, height and width or border-radius
+        to calculate ems
+
+        fontSizeYouWant/fontSize(inherited)= ems
+
+        16/12= 1.33
+    */
+}
+
+.box {
+    padding: 1em;
+    border-radius: 1em;
+    background-color: lightgray;
+}
+
+.box-small {
+    font-size: 12px;
+}
+
+.box-large {
+    font-size: 18px;
+}
+
+/*
+body {
+    font-size: 16px;
+}
+    .slogan {
+        font-size: 1.2em;  in this cases this is evaluated to 19.2px
+        padding: 1.2em; in this case this value will consider 19.2px and then final value will be 23.04px
+        background-color: #ccc;
+
+        this also works on nested elements ems will be calculated using the parent value or the current one
+    }
+ */
+
+.panel {
+    font-size: 1rem;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid #999;
+}
+
+.panel > h2 {
+    margin-top: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* For responsive styles
+@media (min-width: 800px){
+    :root {
+        font-size: 0.2em;
+    }
+}
+
+@media (min-width: 1200px){
+    :root {
+        font-size: 0.1em;
+    }
+}
+*/
+
+.about-us {
+    font-size:  2em;
+    /* var(no_defined, default_value) */
+    font-family: var(--main-font);
+}

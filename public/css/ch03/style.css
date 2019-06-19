@@ -1,0 +1,206 @@
+/*Universal practice
+Box model using floats
+
+if using some third-party components then
+*/
+
+/* *,
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+ */
+
+
+
+/*
+body {
+    background-color: #eee;
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+header{
+
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: .5em;
+}
+
+main {
+    display: block;
+}
+
+ */
+
+/*First approach using floats
+    float: left;
+    width: 70%;
+       box-sizing: border-box; padding included
+
+.main {
+    float: left;
+    width: 70%;
+    background-color:  #fff;
+    border-radius: 0.5em;;
+    border: solid;
+
+
+}
+
+.sidebar{
+    float: left;
+    width: calc(30% - 1.5em);
+    margin-left: 1.5em;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+    border: solid;
+}
+
+*/
+
+/*
+    second apporach using table layouts
+    maybe it's not the best approach
+ */
+/*
+.wrapper{
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+}
+
+ .container {
+    display: table;
+    width: 100%;
+    border-spacing: 1.5em 0;
+}
+
+.main{
+    display: table-cell;
+    width: 70%;
+    background-color:  #fff;
+    border-radius: 0.5em;;
+}
+.sidebar{
+    display: table-cell;
+    width: 30% ;
+    margin-left: 1.5em;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+
+*/
+
+/*
+    Using the flex box mode, it produces elements of equal height
+
+    TIP Favor the use of a flexbox instead of a table layout if you aren’t actively
+        supporting IE9 or older.
+ */
+/*
+.container {
+    display: flex;
+}
+
+.main {
+    width: 70%;
+    background-color: #fff;
+    border-radius: 0.5em;
+}
+
+.sidebar {
+    width: 30%;
+    padding: 1.5em;
+    margin-left: 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+.button-link {
+    display: block;
+    padding: 0.5em;
+    color: #fff;
+    background-color: #0090C9;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+*/
+
+
+
+
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #eee;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body * + * {
+    margin-top: 1.5em;
+}
+
+header {
+    padding: 1em 1.5em;
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: .5em;
+}
+
+.container {
+    display: flex;
+}
+
+.main {
+    width: 70%;
+    padding: 1em 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+.sidebar {
+    width: 30%;
+    padding: 1.5em;
+    margin-top: 0;
+    margin-left: 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+.button-link {
+    display: block;
+    padding: .5em;
+    color: #fff;
+    background-color: #0090C9;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.sponsor-link {
+    display: block;
+    color: #0072b0;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sponsor-link {
+    display: block;
+    color: #0072b0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
