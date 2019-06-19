@@ -34,9 +34,13 @@ router.delete('/:idItem',function(req,res){
 });
 
 router.post('/:idItem',function(req,res){
-  Item.updateOne({_id:req.params.idItem},req.body)
+  Item.updateOne({_id:req.params.idItem},req.body).then(ok =>{
+    res.send("updated")
+  }).catch(err =>{
+    res.json(err)
+  })
 
-  res.send("updated")
+
 
 })
 
