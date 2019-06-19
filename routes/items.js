@@ -8,6 +8,16 @@ router.get('/', function(req, res) {
   });
 });
 
+router.get('/:idItem', function(req, res) {
+  Item.findOne({_id:req.params.idItem}).then(item =>{
+
+    res.json(item)
+  }).catch(err=>{
+    res.json({code:500})
+  })
+});
+
+
 router.put('/',function(req,res){
   var newItem= new Item(req.body);
   newItem.save();
