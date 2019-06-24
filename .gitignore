@@ -65,3 +65,5 @@ typings/
 nodeapp.iml
 
 package-lock.json
+
+mongodata
