@@ -33,3 +33,36 @@ header {
     border-radius: .5em;
 }
 
+.container{
+    max-width: 1080px;
+    margin: 0 auto; /* auto left and right margins will grow to fill the available space, centering the element within the outer container*/
+}
+/*
+Adds a right and bottom margin to each media element
+Subtracts the margin from the width to avoid unwanted line wrapping
+*/
+
+.media{
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+    width: calc(50% - 1.5em);
+    padding: 1.5em;
+    background-color: #eee;
+    border-radius: 0.5em;
+}
+
+/*This will clear every row  inside the main container it's useful when we know how many elements are inside*/
+.media:nth-child(odd){
+    clear:left;
+}
+/*This will add the clear style at the end of the main tag*/
+.clearfix::before,
+.clearfix::after{
+    display: table;
+    content: " ";
+
+}
+
+.clearfix::after{
+    clear: both;
+}
