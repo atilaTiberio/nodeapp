@@ -19,6 +19,7 @@ body * + * {
 
 /* so far it's a good practice to start with these styles*/
 
+/* Header colors and padding */
 header {
     padding: 1em 1.5em;
     color: #fff;
@@ -27,16 +28,22 @@ header {
     margin-bottom: 1.5em;
 }
 
+/*Main (white container) colors and padding. Padding such an important thing */
 .main {
     padding: 0 1.5em;
     background-color:  #fff;
     border-radius: .5em;
 }
 
+/*Double container the outer one is body */
 .container{
     max-width: 1080px;
-    margin: 0 auto; /* auto left and right margins will grow to fill the available space, centering the element within the outer container*/
+    /* auto left and right margins will grow to fill the available space, centering the element within the outer container
+    this is why the container is centered
+    */
+    margin: 0 auto;
 }
+
 /*
 Adds a right and bottom margin to each media element
 Subtracts the margin from the width to avoid unwanted line wrapping
@@ -51,18 +58,34 @@ Subtracts the margin from the width to avoid unwanted line wrapping
     border-radius: 0.5em;
 }
 
-/*This will clear every row  inside the main container it's useful when we know how many elements are inside*/
+/*This will clear every row  inside the main container it's useful when we know how many elements are inside
+this will help to keep boxes properly set
+*/
 .media:nth-child(odd){
     clear:left;
 }
 /*This will add the clear style at the end of the main tag*/
 .clearfix::before,
 .clearfix::after{
-    display: table;
-    content: " ";
+    display: table;/* this works with block-level elements table-cell is not one of those elements so it won't work */
+    content: " "; /*some old workaround for some browsers like opera*/
 
 }
 
 .clearfix::after{
     clear: both;
+}
+
+.media-image{
+    float: left;
+    margin-right: 1.5em;/*Add a margin to the image to insert space between it and the body*/
+}
+
+.media-body{
+    overflow: auto;/*text won't overlap the floated image */
+    margin-top: 0;
+}
+
+.media-body h4 {
+    margin-top: 0;
 }
