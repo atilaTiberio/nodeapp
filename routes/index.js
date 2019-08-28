@@ -24,4 +24,13 @@ router.get('/ch04', function(req, res, next) {
 });
 
 
+router.get('/ch04grid', function(req, res, next) {
+  res.render('ch04grid', { title: 'NoTitle' });
+});
+
+router.get('/ch05', function(req, res, next) {
+  res.render('ch05', { title: 'NoTitle' });
+});
+
+
 module.exports = router;

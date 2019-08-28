@@ -30,7 +30,7 @@ header {
 
 /*Main (white container) colors and padding. Padding such an important thing */
 .main {
-    padding: 0 1.5em;
+    padding: 0 1.5em 1.5em;
     background-color: #fff;
     border-radius: .5em;
 }
@@ -44,26 +44,51 @@ header {
     margin: 0 auto;
 }
 
-/*
-Adds a right and bottom margin to each media element
-Subtracts the margin from the width to avoid unwanted line wrapping
-*/
+.row::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
 
-.media {
+/*
+    For aligning with Runnig tips text
+ */
+.row{
+    margin-left: -0.75em;
+    margin-right: -0.75em;
+}
+
+/*Attribute selector all the elements with class attribute that starts with column-*/
+[class*="column-"]{
     float: left;
-    margin: 0 1.5em 1.5em 0;
-    width: calc(50% - 1.5em);
+    padding: 0 0.75em; /* .75em to the left and the right */
+    margin-top: 0;/*Removes top margin from columns */
+
+}
+
+.column-1 { width: 8.3333%; }
+.column-2 { width: 16.6667%; }
+.column-3 { width: 25%; }
+.column-4 { width: 33.3333%; }
+.column-5 { width: 41.6667%; }
+.column-6 { width: 50%; }
+.column-7 { width: 58.3333%; }
+.column-8 { width: 66.6667%; }
+.column-9 { width: 75%; }
+.column-10 { width: 83.3333%; }
+.column-11 { width: 91.6667% }
+.column-12 { width: 100%; }
+
+/*
+    Grid doesn't need anymore floats, widths, margins, this already being handled by the column classes
+neither nth child to clear
+ */
+.media {
     padding: 1.5em;
     background-color: #eee;
     border-radius: 0.5em;
 }
 
-/*This will clear every row  inside the main container it's useful when we know how many elements are inside
-this will help to keep boxes properly set
-*/
-.media:nth-child(odd) {
-    clear: left;
-}
 
 /*This will add the clear style at the end of the main tag*/
 .clearfix::before,
@@ -94,8 +119,10 @@ this will help to keep boxes properly set
         position : absolute or position: fixed
     */
     margin-top: 0;
+
 }
 
 .media-body h4 {
     margin-top: 0;
 }
+
