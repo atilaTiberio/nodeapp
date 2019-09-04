@@ -137,14 +137,15 @@ This will become into nested flexboxes
 .cost{
     display: flex; /*flex container*/
     justify-content: center;
-    align-items: center;
+    align-items: center; /*Centers flex items on both the main and cross axes*/
     line-height: .7; /*centers content*/
 }
 
 .cost > span {
-    margin-top: 0;
+    margin-top: 0; /*Overrides margins from the lobotomized owl*/
 }
 
+/*comment=1*/
 .cost-currency {
     font-size: 2rem;
 }
@@ -155,8 +156,9 @@ This will become into nested flexboxes
 
 .cost-cents{
     font-size: 1.5rem;
-    align-self: flex-start;
+    align-self: flex-start; /*Overrides align-items for this item, aligning it to the top instead of center*/
 }
+/*comment=1 Sets different font sizes for each part of the cost*/
 
 .cta-button{
     display: block;

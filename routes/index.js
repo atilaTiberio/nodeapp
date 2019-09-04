@@ -33,8 +33,17 @@ router.get('/ch05', function(req, res, next) {
   res.render('ch05', { title: 'NoTitle' });
 });
 
+
+router.get('/ch06_gridof_ch05', function(req, res, next) {
+  res.render('ch06_gridof_ch05', { title: 'NoTitle' });
+});
+
 router.get('/ch06', function(req, res, next) {
-  res.render('ch06', { title: 'NoTitle' });
+  res.render('ch06_grid_native', { title: 'NoTitle' });
+});
+
+router.get('/ch06_portafolio', function(req, res, next) {
+  res.render('ch06_portafolio', { title: 'NoTitle' });
 });
 
 

@@ -1,0 +1,18 @@
+
+/*
+Grid */
+.grid {
+    display: grid; /* Makes a grid container */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Defines three columns of equal width. Fraction unit like flex-grow. Also fixed values could be used i.e
+    300px 1fr*/
+    grid-template-rows: 1fr 1fr; /*Defines 2 rows of equal height */
+    grid-gap: 0.5em; /* Applies a gutter between each grid cell*/
+}
+
+.grid > * {
+    background-color: darkgray;
+    color: white;
+    padding: 2em;
+    border-radius: 0.5em;
+}
