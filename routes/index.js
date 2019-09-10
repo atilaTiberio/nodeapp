@@ -43,6 +43,7 @@ router.get('/ch06', function(req, res, next) {
 });
 
 router.get('/ch06_portafolio', function(req, res, next) {
+
   res.render('ch06_portafolio', { title: 'NoTitle' });
 });
 
