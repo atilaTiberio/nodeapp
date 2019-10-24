@@ -18,7 +18,7 @@ router.get('/:idItem', function(req, res) {
 });
 
 
-router.put('/',function(req,res){
+router.post('/',function(req,res){
   var newItem= new Item(req.body);
   newItem.save();
   res.send("saved")
@@ -33,7 +33,10 @@ router.delete('/:idItem',function(req,res){
   res.send("deleted");
 });
 
-router.post('/:idItem',function(req,res){
+router.put('/:idItem',function(req,res){
+
+
+
   Item.updateOne({_id:req.params.idItem},req.body).then(ok =>{
     res.send("updated")
   }).catch(err =>{
